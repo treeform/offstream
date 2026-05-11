@@ -15,6 +15,12 @@ are not enough.
 
 ## Themes
 
-- `2001` - A HAL 9000 inspired interface theme.
-- `tufte` - A sparse document style inspired by Edward Tufte.
-- `bb05` - An experimental theme.
+- [`2001`](https://treeform.github.io/offstream/2001/) - A HAL 9000 inspired interface theme.
+- [`tufte`](https://treeform.github.io/offstream/tufte/) - A sparse document style inspired by Edward Tufte.
+- [`bb05`](https://treeform.github.io/offstream/bb05/) - An experimental theme.
+
+## Publishing
+
+GitHub Pages serves these files directly from the repo. There is no build
+step. The Pages workflow copies the static files into a deploy artifact and
+publishes them whenever `master` changes.
