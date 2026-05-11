@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>bb05 CSS</title>
+  <link rel="stylesheet" href="bb05.css">
+</head>
+<body>
+  <table width="960" align="center" cellpadding="0" cellspacing="0">
+    <tr>
+      <td>
+        <header>
+          <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td>
+                <h1>
+                  <small>phpBB 2005 inspired CSS</small>
+                  bb05
+                </h1>
+                <p>
+                  A table-first forum theme with lavender chrome, tiny topic
+                  icons, Verdana type, hard grid lines, and the durable
+                  feeling of a thread that has been useful since 2005.
+                </p>
+              </td>
+              <td width="230" align="right" valign="top">
+                <p>
+                  <b>Welcome, guest</b><br>
+                  Last visit: Sat May 08, 2005 2:05 pm<br>
+                  <a href="#forms">Register</a> |
+                  <a href="#controls">Login</a>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td colspan="2">
+                <nav>
+                  <a href="#typography">Typography</a>
+                  <a href="#layout">Layout</a>
+                  <a href="#forms">Forms</a>
+                  <a href="#controls">Controls</a>
+                  <a href="#layout">Threads</a>
+                </nav>
+              </td>
+            </tr>
+          </table>
+        </header>
+
+        <table width="100%" cellpadding="0" cellspacing="0">
+          <tr>
+            <td>
+              <b>Board index</b> &raquo; <a href="#typography">bb05</a>
+            </td>
+            <td align="right">
+              Current time: Fri May 08, 2005 11:38 pm
+            </td>
+          </tr>
+        </table>
+
+        <main>
+          <section id="typography">
+            <h2>Typography</h2>
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <th colspan="2">Forum Typography And Posting Voice</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="170" valign="top">
+                    <b>Admin</b><br>
+                    <small>Site Founder<br>Joined: 2003<br>Posts: 4812</small>
+                  </td>
+                  <td valign="top">
+                    <h3>Plain Tags, Durable Pages</h3>
+                    <p>
+                      This page is a small love letter to early internet
+                      forums: the local boards, tiny communities, sticky
+                      posts, searchable answers, and signatures that made a
+                      page feel inhabited. Link
+                      <a href="bb05.css">bb05.css</a>, write ordinary markup,
+                      and let the tables do the layout work.
+                    </p>
+                    <p>
+                      The default voice is <b>Verdana at eleven pixels</b>,
+                      with <i>Trebuchet MS</i> for the board title and
+                      <code>Courier New</code> for code, signatures, and
+                      copied terminal fragments.
+                    </p>
+                    <blockquote>
+                      <p>
+                        The best old forum pages were not pretty because they
+                        were polished. They were pretty because every cell had
+                        a job.
+                      </p>
+                    </blockquote>
+                    <pre><code>&lt;link rel="stylesheet" href="bb05.css"&gt;
+
+&lt;table width="100%" cellpadding="0" cellspacing="0"&gt;
+  &lt;tr&gt;
+    &lt;td&gt;&lt;h1&gt;Board Title&lt;/h1&gt;&lt;/td&gt;
+    &lt;td align="right"&gt;Login | Register&lt;/td&gt;
+  &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="170" valign="top">
+                    <b>Archivist</b><br>
+                    <small>Moderator<br>Joined: 2004<br>Posts: 936</small>
+                  </td>
+                  <td valign="top">
+                    <h3>Heading Rhythm</h3>
+                    <p>
+                      Use <code>h1</code> for the board name,
+                      <code>h2</code> for sections, and <code>h3</code> for
+                      local post titles. Paragraphs stay compact because forum
+                      pages were made for scanning, quoting, and returning
+                      later from a search result.
+                    </p>
+                    <h4>Fourth Level Heading</h4>
+                    <p>
+                      Small headings work for post notes, changelog entries,
+                      and field labels that need more weight than bold text.
+                    </p>
+                    <ul>
+                      <li>Links become blue in posts and dark in navigation.</li>
+                      <li>Bold text reads like a forum status label.</li>
+                      <li>Code blocks keep their hard-edged copy-paste feel.</li>
+                    </ul>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="layout">
+            <h2>Layout: Tables</h2>
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <th colspan="5">Board Index</th>
+                </tr>
+                <tr>
+                  <th width="36">&nbsp;</th>
+                  <th>Forum</th>
+                  <th width="80">Topics</th>
+                  <th width="80">Posts</th>
+                  <th width="190">Last Post</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th colspan="5">General Discussion</th>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <img src="images/forum-folder.svg" alt="Forum icon">
+                  </td>
+                  <td>
+                    <b><a href="#layout">Main Board</a></b><br>
+                    <small>Questions, introductions, announcements, and
+                    threads that keep paying rent in the search index.</small>
+                  </td>
+                  <td align="center">128</td>
+                  <td align="center">4921</td>
+                  <td align="right">
+                    Today, 13:05<br>
+                    by <a href="#typography">IndexFan</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <img src="images/forum-pin.svg" alt="Pinned forum icon">
+                  </td>
+                  <td>
+                    <b><a href="#forms">Guides And Howtos</a></b><br>
+                    <small>Collected answers, solved topics, and gentle notes
+                    from people who tested things before posting.</small>
+                  </td>
+                  <td align="center">42</td>
+                  <td align="center">1377</td>
+                  <td align="right">
+                    Yesterday, 22:11<br>
+                    by <a href="#forms">PlainUser</a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <th colspan="6">Topic Listing</th>
+                </tr>
+                <tr>
+                  <th width="36">&nbsp;</th>
+                  <th>Topic</th>
+                  <th width="120">Starter</th>
+                  <th width="70">Replies</th>
+                  <th width="70">Views</th>
+                  <th width="190">Last Post</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td align="center">
+                    <img src="images/topic-hot.svg" alt="Hot topic icon">
+                  </td>
+                  <td>
+                    <b>Sticky:</b>
+                    <a href="#typography">Read this before asking for help</a>
+                  </td>
+                  <td align="center">Moderator</td>
+                  <td align="center">18</td>
+                  <td align="center">4402</td>
+                  <td align="right">Today, 08:20<br>by Admin</td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <img src="images/topic.svg" alt="Topic icon">
+                  </td>
+                  <td>
+                    <a href="#forms">What makes a reply easy to find later?</a>
+                  </td>
+                  <td align="center">SearchBox</td>
+                  <td align="center">7</td>
+                  <td align="center">352</td>
+                  <td align="right">Today, 07:42<br>by Archivist</td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <img src="images/topic-locked.svg" alt="Locked topic icon">
+                  </td>
+                  <td>
+                    <a href="#controls">Release announcement archive</a>
+                  </td>
+                  <td align="center">Admin</td>
+                  <td align="center">0</td>
+                  <td align="center">1103</td>
+                  <td align="right">Last week<br>by Admin</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <th width="170">Author</th>
+                  <th>Message</th>
+                  <th width="150">Posted</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td width="170" valign="top">
+                    <b>PixelAssembler</b><br>
+                    <small>Member<br>Joined: 2005<br>Posts: 124</small>
+                  </td>
+                  <td valign="top">
+                    <h3>Re: Table Layouts</h3>
+                    <p>
+                      Tables make the hierarchy explicit: board, category,
+                      topic, author, message, date. The page can be dense
+                      without being mysterious.
+                    </p>
+                    <p>
+                      <a href="#layout">Permalink</a> |
+                      <a href="#forms">Reply with quote</a>
+                    </p>
+                  </td>
+                  <td align="right" valign="top">Today, 14:01</td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+
+          <section id="forms">
+            <h2>Forms: Also Tables</h2>
+            <form action="#" method="post">
+              <table width="100%" cellpadding="0" cellspacing="0">
+                <thead>
+                  <tr>
+                    <th colspan="2">Post A Reply</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td width="170">
+                      <label for="forum">Forum</label>
+                    </td>
+                    <td>
+                      <select id="forum" name="forum">
+                        <option>Main Board</option>
+                        <option>Guides And Howtos</option>
+                        <option>Projects</option>
+                      </select>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="170">
+                      <label for="subject">Subject</label>
+                    </td>
+                    <td>
+                      <input id="subject" name="subject" type="text"
+                        value="Re: What makes a reply easy to find later?">
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="170" valign="top">
+                      <label for="message">Message</label>
+                    </td>
+                    <td>
+                      <textarea id="message" name="message" rows="9">Quote only the part you need.
+
+Answer the question directly.
+
+Leave enough context for somebody arriving from search in 2026.</textarea>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="170">Options</td>
+                    <td>
+                      <label>
+                        <input type="checkbox" name="notify" checked>
+                        Notify me when a reply is posted
+                      </label><br>
+                      <label>
+                        <input type="checkbox" name="signature" checked>
+                        Attach my signature
+                      </label><br>
+                      <label>
+                        <input type="checkbox" name="smilies">
+                        Disable smilies in this post
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="170">Topic Type</td>
+                    <td>
+                      <label>
+                        <input type="radio" name="kind" checked>
+                        Normal
+                      </label>
+                      <label>
+                        <input type="radio" name="kind">
+                        Sticky
+                      </label>
+                      <label>
+                        <input type="radio" name="kind">
+                        Announcement
+                      </label>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td width="170">&nbsp;</td>
+                    <td>
+                      <button type="submit">Preview</button>
+                      <button type="submit">Submit</button>
+                      <button type="reset">Reset</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </form>
+          </section>
+
+          <section id="controls">
+            <h2>Controls</h2>
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <thead>
+                <tr>
+                  <th colspan="4">Forum Control Surface</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th colspan="4">Navigation</th>
+                </tr>
+                <tr>
+                  <td width="170">Pagination</td>
+                  <td colspan="3">
+                    <b>Page</b>
+                    <b>1</b>
+                    <a href="#controls">2</a>
+                    <a href="#controls">3</a>
+                    <span>...</span>
+                    <a href="#controls">12</a>
+                    <a href="#controls">Next</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="170">Post Buttons</td>
+                  <td colspan="3">
+                    <button type="button">New Topic</button>
+                    <button type="button">Post Reply</button>
+                    <button type="button">Subscribe</button>
+                    <button type="button">Print View</button>
+                  </td>
+                </tr>
+                <tr>
+                  <th colspan="4">BBCode Toolbar</th>
+                </tr>
+                <tr>
+                  <td width="170">Inline Tools</td>
+                  <td colspan="3">
+                    <button type="button">B</button>
+                    <button type="button">i</button>
+                    <button type="button">quote</button>
+                    <button type="button">code</button>
+                    <button type="button">url</button>
+                    <select aria-label="Font size">
+                      <option>Normal</option>
+                      <option>Small</option>
+                      <option>Large</option>
+                    </select>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="170">Search</td>
+                  <td colspan="2">
+                    <input type="search" value="table layout">
+                  </td>
+                  <td width="120" align="center">
+                    <button type="button">Search</button>
+                  </td>
+                </tr>
+                <tr>
+                  <td width="170">Legend</td>
+                  <td>
+                    <img src="images/topic.svg" alt="Topic icon">
+                    Normal
+                  </td>
+                  <td>
+                    <img src="images/topic-hot.svg" alt="Hot topic icon">
+                    Popular
+                  </td>
+                  <td>
+                    <img src="images/topic-locked.svg" alt="Locked topic icon">
+                    Locked
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+        </main>
+
+        <footer>
+          <table width="100%" cellpadding="0" cellspacing="0">
+            <tr>
+              <td>
+                bb05 is static HTML and CSS. It keeps the early forum palette
+                and blunt markup on purpose.
+              </td>
+              <td width="220" align="right">
+                Powered by tables.
+              </td>
+            </tr>
+          </table>
+        </footer>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>

@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tufte CSS</title>
+  <link rel="stylesheet" href="tufte.css">
+</head>
+<body>
+  <main>
+    <section>
+      <h1>Tufte CSS</h1>
+      <p>
+        This page is both the showcase and the usage guide for
+        <b>tufte.css</b>, inspired by Edward Tufte. Copy the CSS file next to
+        any plain HTML document, link it in the head, and write normal
+        semantic tags: <i>h1</i>, <i>p</i>, <i>aside</i>, <i>figure</i>,
+        <i>form</i>, and <i>table</i>. The theme uses warm paper, near-black
+        ink, quiet rules, embedded prose controls, and compact Gill Sans
+        tables.
+      </p>
+      <aside>
+        <p>
+          Use asides for margin notes. Put the <code>aside</code> directly
+          after the paragraph it annotates so it can sit beside the text on
+          wide screens and below it on narrow screens.
+        </p>
+      </aside>
+      <p>
+        The default text width is intentionally narrow. The main page can be
+        wider, but prose should stay readable. Links are simple
+        <a href="https://www.edwardtufte.com/">underlined text</a>. Important values
+        can use <mark>mark</mark>, while ordinary emphasis should stay with
+        <i>i</i>, <em>em</em>, <b>b</b>, and <strong>strong</strong>.
+      </p>
+
+      <pre><code>&lt;link rel="stylesheet" href="tufte.css"&gt;
+
+&lt;main&gt;
+  &lt;h1&gt;Notebook Title&lt;/h1&gt;
+  &lt;p&gt;Plain prose with &lt;b&gt;strong data&lt;/b&gt; and a note.&lt;/p&gt;
+  &lt;aside&gt;Side notes are just asides.&lt;/aside&gt;
+&lt;/main&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Headings</h2>
+      <p>
+        Headings are light, serif, and explicit. They should introduce real
+        structure rather than decorate the page.
+      </p>
+      <h3>Third Level Heading</h3>
+      <p>
+        A third level heading works well for sections inside results, methods,
+        or examples. The rhythm stays close to the source typography.
+      </p>
+      <h4>Fourth Level Heading</h4>
+      <p>
+        A fourth level heading is small enough for local notes, subsections,
+        and table commentary.
+      </p>
+    </section>
+
+    <section>
+      <h2>Paragraphs</h2>
+      <p>
+        The style is designed for analytic writing. A paragraph can carry
+        narrative, a number, and a source note without changing gears.
+        The paper color is <code>#fffff8</code>, the text color is
+        <code>#111111</code>, and quiet code surfaces use
+        <code>#f8f8f0</code>.
+      </p>
+      <aside>
+        <p>
+          Margin notes should be short. They are not cards, alerts, or
+          callouts. They are local annotations.
+        </p>
+      </aside>
+      <p>
+        A paragraph may also contain a star note<sup><a href="#note-source">*</a></sup>.
+        Put the explanation in the footer. This keeps the reading path clean
+        while preserving provenance and caveats.
+      </p>
+      <blockquote>
+        <p>
+          The visual furniture should be quieter than the evidence, and the
+          evidence should be quieter than the reader's own conclusion.
+        </p>
+      </blockquote>
+    </section>
+
+    <section>
+      <h2>Figures</h2>
+      <p>
+        Use ordinary <code>figure</code> and <code>figcaption</code> tags for
+        charts. The CSS does not impose a chart library. Agents can paste in
+        SVG, canvas, or an image produced by another tool.
+      </p>
+      <figure class="wide">
+        <svg viewBox="0 0 760 260" role="img"
+          aria-label="A minimal line chart with one measured series.">
+          <rect x="0" y="0" width="760" height="260" fill="#fffff8"></rect>
+          <g stroke="#e9ecef" stroke-width="1">
+            <line x1="54" y1="30" x2="54" y2="218"></line>
+            <line x1="54" y1="218" x2="720" y2="218"></line>
+            <line x1="54" y1="171" x2="720" y2="171"></line>
+            <line x1="54" y1="124" x2="720" y2="124"></line>
+            <line x1="54" y1="77" x2="720" y2="77"></line>
+          </g>
+          <polyline fill="none" stroke="#111111" stroke-width="2"
+            points="54,191 118,180 182,142 246,155 310,119 374,96 438,105 502,72 566,64 630,51 694,44">
+          </polyline>
+          <g fill="#111111">
+            <circle cx="54" cy="191" r="3"></circle>
+            <circle cx="310" cy="119" r="3"></circle>
+            <circle cx="694" cy="44" r="3"></circle>
+          </g>
+          <g fill="#666666" font-family="Gill Sans, sans-serif"
+            font-size="15">
+            <text x="42" y="224" text-anchor="end">0</text>
+            <text x="42" y="130" text-anchor="end">50</text>
+            <text x="42" y="36" text-anchor="end">100</text>
+            <text x="54" y="244" text-anchor="middle">1</text>
+            <text x="374" y="244" text-anchor="middle">6</text>
+            <text x="694" y="244" text-anchor="middle">11</text>
+          </g>
+        </svg>
+        <figcaption>
+          A quiet chart surface: no frame, light rules, tabular labels, and
+          one visible series.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section>
+      <h2>Forms</h2>
+      <p>
+        Inline forms are preferred when the controls are small and can be part
+        of a sentence. If you must use larger forms, here they are too:
+      </p>
+      <p>
+        Inline controls work inside prose. Observe the site for
+        <input type="number" value="14" min="1" max="100">
+        days with
+        <input type="number" value="6" min="1" max="24">
+        samples per day, recording
+        <select>
+          <option>light and shade</option>
+          <option>wind and water</option>
+          <option>soil and slope</option>
+        </select>
+        as the primary signal.
+      </p>
+      <aside>
+        <p>
+          Inputs in paragraphs are underlined and compact because they are
+          part of the sentence.
+        </p>
+      </aside>
+      <form onsubmit="return false;">
+        <fieldset>
+          <legend>Observation</legend>
+
+          <label for="site">Site</label>
+          <input id="site" name="site" value="North transect">
+
+          <label for="method">Method</label>
+          <select id="method" name="method">
+            <option>walking survey</option>
+            <option>fixed camera</option>
+            <option>sample quadrat</option>
+          </select>
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes">Keep the form quiet and make the observations do the work.</textarea>
+
+          <p>
+            <label>
+              <input type="checkbox" checked>
+              include raw measurements
+            </label>
+          </p>
+
+          <button type="submit">record</button>
+          <button type="reset">reset</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section>
+      <h2>Controls</h2>
+      <p>
+        Controls should feel like ink on the page. They use black strokes,
+        paper-colored surfaces, compact labels, and the same serif voice as
+        the surrounding text.
+      </p>
+      <form onsubmit="return false;">
+        <fieldset>
+          <legend>Control Set</legend>
+
+          <label for="title">Text input</label>
+          <input id="title" name="title" value="Annotated field notes">
+
+          <label for="count">Number input</label>
+          <input id="count" name="count" type="number" value="12" min="0">
+
+          <label for="mode">Select menu</label>
+          <select id="mode" name="mode">
+            <option>compare</option>
+            <option>collect</option>
+            <option>revise</option>
+          </select>
+
+          <label for="density">Slider</label>
+          <input id="density" name="density" type="range" min="0" max="100"
+            value="64">
+
+          <p>
+            <label>
+              <input type="checkbox" checked>
+              show marginal notes
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox">
+              show source table
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <input type="radio" name="scale" checked>
+              local scale
+            </label>
+            <label>
+              <input type="radio" name="scale">
+              regional scale
+            </label>
+          </p>
+
+          <button type="button">plain</button>
+          <button type="submit">submit</button>
+          <button type="reset">reset</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section>
+      <h2>Tables</h2>
+      <p>
+        Tables use the Gill Sans treatment. Text columns stay left, numeric
+        columns align right, and rules are barely there.
+      </p>
+      <table>
+        <caption>
+          Example summary table for an analytic report.
+        </caption>
+        <thead>
+          <tr>
+            <th>Plot</th>
+            <th>Samples</th>
+            <th>Median lux</th>
+            <th>Moisture</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>north transect</td>
+            <td>42</td>
+            <td>2,430</td>
+            <td>11.2%</td>
+          </tr>
+          <tr>
+            <td>shade margin</td>
+            <td>38</td>
+            <td>1,880</td>
+            <td>40.2%</td>
+          </tr>
+          <tr>
+            <td>lower slope</td>
+            <td>31</td>
+            <td>2,070</td>
+            <td>22.1%</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>source</td>
+            <td colspan="3">synthetic sample values</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <pre><code>&lt;table&gt;
+  &lt;caption&gt;Use captions for source and scope.&lt;/caption&gt;
+  &lt;thead&gt;...&lt;/thead&gt;
+  &lt;tbody&gt;...&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>Agent Notes</h2>
+      <dl>
+        <dt>Use tags first.</dt>
+        <dd>
+          Prefer <code>main</code>, <code>section</code>, <code>p</code>,
+          <code>aside</code>, <code>figure</code>, <code>form</code>, and
+          <code>table</code> before inventing component classes.
+        </dd>
+        <dt>Use classes only for intent.</dt>
+        <dd>
+          The stylesheet includes a few helpers, such as <code>.wide</code>,
+          <code>.quiet</code>, <code>.sans</code>, <code>.highlight</code>,
+          and compatibility classes like <code>.narrative</code>.
+        </dd>
+        <dt>Keep the page sparse.</dt>
+        <dd>
+          Avoid cards, gradients, heavy borders, and decorative panels. This
+          theme is strongest when the writing, tables, and figures carry the
+          meaning.
+        </dd>
+      </dl>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Notes</h2>
+    <ol>
+      <li id="note-source">
+        Star notes belong here. Use them for sources, definitions, caveats, or
+        tiny explanations that would interrupt the paragraph.
+      </li>
+    </ol>
+  </footer>
+</body>
+</html>

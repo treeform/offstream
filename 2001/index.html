@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2001 Space Odyssey CSS Theme</title>
+  <link rel="stylesheet" href="2001.css?v=20260508j">
+</head>
+<body>
+  <header>
+    <h1>
+      <small>CSS: THEME</small>
+      2001
+    </h1>
+    <p>
+      A plain HTML CSS theme inspired by the HAL 9000 interfaces in
+      <i>2001: A Space Odyssey</i>, with stark white type, solid screen
+      colors, glowing program labels, and simple telemetry graphics.
+    </p>
+    <p>
+      To use it, link <a href="2001.css">2001.css</a> in your page head and
+      write normal document markup: headings, paragraphs, forms, tables,
+      lists, quotes, and code blocks.
+    </p>
+  </header>
+
+  <main>
+    <section>
+      <h2>
+        <small>TYP.</small>
+        PROG. 601
+      </h2>
+      <p>
+        Each heading can take a small command label directly above the main
+        word. Put a plain <code>&lt;small&gt;</code> as the first child of
+        <code>&lt;h1&gt;</code>, <code>&lt;h2&gt;</code>, or
+        <code>&lt;h3&gt;</code>. The label stays close while the heading
+        becomes a big color field.
+      </p>
+      <h3>
+        <small>GDE: 13-AQ</small>
+        GDE
+      </h3>
+      <p>
+        Lower headings keep the same vocabulary at a smaller scale. The
+        theme works best when the markup stays direct and the document
+        structure does the heavy lifting.
+      </p>
+      <h4>
+        <small>NAV: 08-BF</small>
+        NAV
+      </h4>
+      <p>
+        The fourth level is compact enough for notes, changelogs, and dense
+        interfaces without becoming decorative noise.
+      </p>
+    </section>
+
+    <section>
+      <h2>
+        <small>TXT.</small>
+        PROG. 602
+      </h2>
+      <p>
+        Body copy keeps a steady reading width: centered, calm, and direct.
+        Inside a paragraph, <b>bold text reads like a status signal</b>,
+        while <i>italic text reads like telemetry</i>. Links stay white and
+        simple. Normal text uses
+        <a href="https://fonts.google.com/specimen/IBM+Plex+Sans">IBM Plex Sans from Google Fonts</a>,
+        and table figures use IBM Plex Mono.
+      </p>
+      <p>
+        The theme does not require wrapper classes for everyday text. Write
+        the page like a document first, then use classes only when the shape
+        is truly special.
+      </p>
+      <p>
+        <samp>
+          SYS 04-AC RELAY 1138.040 / BFR 00039 / AMB 14.85 / NODE 7
+          REPORTS NOMINAL SIGNAL DRIFT WITHIN ACCEPTED RANGE.
+        </samp>
+      </p>
+      <blockquote>
+        <p>
+          Open the pod bay doors, read the cascade, and keep the content
+          legible in the dark.
+        </p>
+      </blockquote>
+      <ul>
+        <li>Use <code>&lt;b&gt;</code> for strong inline status labels.</li>
+        <li>Use <code>&lt;i&gt;</code> for soft notes and quiet hints.</li>
+        <li>Use <code>&lt;small&gt;</code> inside headings for the sub label.</li>
+      </ul>
+      <pre><code>&lt;link rel="stylesheet" href="2001.css"&gt;
+
+&lt;h1&gt;
+  &lt;small&gt;STA: 36-05&lt;/small&gt;
+  ODY
+&lt;/h1&gt;
+&lt;p&gt;Write plain HTML. Let the stylesheet handle the console.&lt;/p&gt;</code></pre>
+    </section>
+
+    <section>
+      <h2>
+        <small>FRM.</small>
+        PROG. 603
+      </h2>
+      <p>
+        Forms keep the controls visible and readable, with fields pushed
+        into the dark console palette.
+      </p>
+      <form>
+        <fieldset>
+          <legend>Mission Request</legend>
+          <label for="name">Crew name</label>
+          <input id="name" name="name" type="text" value="Dave Bowman">
+
+          <label for="system">System</label>
+          <select id="system" name="system">
+            <option>Discovery One</option>
+            <option>Moonbus</option>
+            <option>EVA Pod</option>
+          </select>
+
+          <label for="priority">Priority</label>
+          <input id="priority" name="priority" type="range" min="0" max="10" value="7">
+
+          <label for="note">Console note</label>
+          <textarea id="note" name="note" rows="4">Confirm AE-35 alignment before Jupiter insertion.</textarea>
+        </fieldset>
+
+        <fieldset>
+          <legend>Control Flags</legend>
+          <label>
+            <input name="awake" type="checkbox" checked>
+            Keep crew telemetry online
+          </label>
+          <label>
+            <input name="mode" type="radio" checked>
+            Manual docking
+          </label>
+          <label>
+            <input name="mode" type="radio">
+            Computer assisted docking
+          </label>
+        </fieldset>
+
+        <p>
+          <button type="button">Transmit</button>
+          <button type="reset">Reset</button>
+        </p>
+      </form>
+    </section>
+
+    <section>
+      <h2>SLOL</h2>
+      <p>
+        Tables can be stripped down to a telemetry matrix: no chrome, no
+        heavy borders, only white figures on a solid screen color.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th colspan="4">RE; RM/3<sup>2</sup>4<sub>2</sub> 4.4(36;)+.368</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>RE: 1</td>
+            <td>-----</td>
+            <td>.36840645</td>
+            <td>9/52</td>
+          </tr>
+          <tr>
+            <td>RE: 2</td>
+            <td>-----</td>
+            <td>.68706533</td>
+            <td>9/52</td>
+          </tr>
+          <tr>
+            <td>RE: 3</td>
+            <td>-----</td>
+            <td>.98700560</td>
+            <td>9/52</td>
+          </tr>
+          <tr>
+            <td>RE: 4</td>
+            <td>-----</td>
+            <td>.50545876</td>
+            <td>9/52</td>
+          </tr>
+        </tbody>
+      </table>
+      <table>
+        <caption>Crew Medical Index</caption>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Blood</th>
+            <th>Status</th>
+            <th>Bay</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>David Bowman</td>
+            <td>34</td>
+            <td>O+</td>
+            <td>Awake</td>
+            <td>A-1</td>
+          </tr>
+          <tr>
+            <td>Frank Poole</td>
+            <td>33</td>
+            <td>A-</td>
+            <td>EVA</td>
+            <td>A-2</td>
+          </tr>
+          <tr>
+            <td>Victor Kaminsky</td>
+            <td>42</td>
+            <td>B+</td>
+            <td>Hibernation</td>
+            <td>B-1</td>
+          </tr>
+          <tr>
+            <td>Jack Kimball</td>
+            <td>39</td>
+            <td>AB+</td>
+            <td>Hibernation</td>
+            <td>B-2</td>
+          </tr>
+          <tr>
+            <td>Charles Hunter</td>
+            <td>41</td>
+            <td>O-</td>
+            <td>Hibernation</td>
+            <td>B-3</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>
+        <small>RAD.</small>
+        PROG. 605
+      </h2>
+      <p>
+        Inline SVG can carry the same console language: thin white arcs,
+        radial paths, quiet points, and a small numeric telemetry readout.
+      </p>
+      <svg viewBox="0 0 1200 700" role="img" aria-label="Radial telemetry chart">
+        <title>Radial telemetry chart</title>
+        <g opacity="0.38">
+          <path d="M-50 86 C210 125 420 230 612 358 S950 560 1260 600" />
+          <path d="M-20 188 C260 210 420 252 600 350 S950 480 1220 500" />
+          <path d="M-40 574 C260 520 428 476 610 352 S910 170 1240 82" />
+          <path d="M38 -40 C180 210 330 402 600 350 S870 170 1030 -40" />
+          <path d="M1160 -40 C992 188 850 270 610 350 S320 506 80 740" />
+          <path d="M-20 640 L1240 240" />
+          <path d="M-20 285 L1240 390" />
+          <path d="M256 -40 L790 740" />
+          <path d="M770 -40 L540 740" />
+          <path d="M-20 432 H1220" />
+          <path d="M600 -20 V720" />
+        </g>
+        <g opacity="0.82">
+          <circle cx="600" cy="430" r="34" />
+          <circle cx="600" cy="430" r="58" />
+          <circle cx="600" cy="430" r="82" />
+          <circle cx="600" cy="430" r="106" />
+          <circle cx="600" cy="430" r="132" />
+          <circle cx="600" cy="430" r="160" />
+          <circle cx="600" cy="430" r="192" />
+          <circle cx="600" cy="430" r="230" />
+          <circle cx="600" cy="430" r="278" />
+          <circle cx="600" cy="430" r="328" />
+          <path d="M136 430 A464 464 0 0 1 1064 430" />
+          <path d="M176 430 A424 424 0 0 1 1024 430" />
+          <path d="M216 430 A384 384 0 0 1 984 430" />
+          <path d="M256 430 A344 344 0 0 1 944 430" />
+          <path d="M296 430 A304 304 0 0 1 904 430" />
+          <path d="M600 82 V684" />
+          <path d="M70 430 H1130" />
+          <path d="M260 108 L940 670" />
+          <path d="M940 108 L260 670" />
+          <path d="M420 34 L720 700" />
+          <path d="M780 34 L480 700" />
+        </g>
+        <g>
+          <circle cx="430" cy="235" r="4" />
+          <circle cx="492" cy="305" r="4" />
+          <circle cx="562" cy="346" r="4" />
+          <circle cx="616" cy="309" r="4" />
+          <circle cx="732" cy="250" r="4" />
+          <circle cx="792" cy="364" r="4" />
+          <circle cx="714" cy="530" r="4" />
+          <circle cx="554" cy="502" r="4" />
+          <circle cx="446" cy="430" r="4" />
+          <circle cx="902" cy="340" r="4" />
+          <circle cx="990" cy="190" r="4" />
+        </g>
+        <text x="846" y="78">
+          <tspan x="846" dy="0">00000     49902</tspan>
+          <tspan x="846" dy="34">00000     77316</tspan>
+          <tspan x="846" dy="34">00000     14886</tspan>
+          <tspan x="846" dy="34">56992     84938</tspan>
+          <tspan x="846" dy="34">78331     84739</tspan>
+          <tspan x="846" dy="34">31490     68310</tspan>
+        </text>
+      </svg>
+    </section>
+
+    <section>
+      <h2>
+        <small>SPK.</small>
+        PROG. 606
+      </h2>
+      <p>
+        Dense sparkline charts work best as simple signal fields: repeated
+        white strokes, hard baselines, and a numeric register to the side.
+      </p>
+      <svg viewBox="0 0 1200 760" role="img" aria-label="Sparkline telemetry chart">
+        <title>Sparkline telemetry chart</title>
+        <g opacity="0.72">
+          <path d="M90 82 V690" />
+          <path d="M90 160 H675 M90 285 H675 M90 410 H675 M90 535 H675 M90 660 H675" />
+        </g>
+        <g opacity="0.9">
+          <path d="M104 160 V106 M114 160 V118 M124 160 V98 M134 160 V116 M144 160 V90 M154 160 V102 M164 160 V86 M174 160 V108 M184 160 V76 M194 160 V94 M204 160 V82 M214 160 V64 M224 160 V72 M234 160 V58 M244 160 V66 M254 160 V84 M264 160 V70 M274 160 V78 M284 160 V60 M294 160 V52 M304 160 V68 M314 160 V76 M324 160 V58 M334 160 V92 M344 160 V72 M354 160 V84 M364 160 V64 M374 160 V82 M384 160 V72 M394 160 V88 M404 160 V78 M414 160 V64 M424 160 V86 M434 160 V74 M444 160 V92 M454 160 V80 M464 160 V68 M474 160 V84 M484 160 V72 M494 160 V90 M504 160 V76 M514 160 V98 M524 160 V82 M534 160 V88 M544 160 V96 M554 160 V74 M564 160 V102 M574 160 V84 M584 160 V110 M594 160 V92 M604 160 V118 M614 160 V100 M624 160 V112 M634 160 V96 M644 160 V120 M654 160 V108" />
+          <path d="M104 285 V218 M114 285 V238 M124 285 V210 M134 285 V226 M144 285 V202 M154 285 V232 M164 285 V214 M174 285 V246 M184 285 V220 M194 285 V236 M204 285 V206 M214 285 V248 M224 285 V232 M234 285 V256 M244 285 V226 M254 285 V242 M264 285 V252 M274 285 V238 M284 285 V260 M294 285 V244 M304 285 V250 M314 285 V232 M324 285 V242 M334 285 V226 M344 285 V248 M354 285 V218 M364 285 V236 M374 285 V210 M384 285 V230 M394 285 V202 M404 285 V226 M414 285 V214 M424 285 V236 M434 285 V220 M444 285 V250 M454 285 V232 M464 285 V256 M474 285 V238 M484 285 V244 M494 285 V226 M504 285 V216 M514 285 V232 M524 285 V210 M534 285 V226 M544 285 V198 M554 285 V220 M564 285 V206 M574 285 V230 M584 285 V214 M594 285 V238 M604 285 V222 M614 285 V246 M624 285 V230 M634 285 V254 M644 285 V236 M654 285 V248" />
+          <path d="M104 410 V354 M114 410 V338 M124 410 V350 M134 410 V330 M144 410 V346 M154 410 V320 M164 410 V336 M174 410 V304 M184 410 V326 M194 410 V314 M204 410 V296 M214 410 V308 M224 410 V286 M234 410 V300 M244 410 V278 M254 410 V292 M264 410 V284 M274 410 V300 M284 410 V316 M294 410 V302 M304 410 V326 M314 410 V310 M324 410 V336 M334 410 V318 M344 410 V342 M354 410 V326 M364 410 V350 M374 410 V332 M384 410 V354 M394 410 V338 M404 410 V360 M414 410 V346 M424 410 V372 M434 410 V350 M444 410 V364 M454 410 V342 M464 410 V356 M474 410 V334 M484 410 V348 M494 410 V326 M504 410 V340 M514 410 V318 M524 410 V332 M534 410 V306 M544 410 V324 M554 410 V312 M564 410 V336 M574 410 V320 M584 410 V342 M594 410 V326 M604 410 V350 M614 410 V334 M624 410 V356 M634 410 V342 M644 410 V364 M654 410 V348" />
+          <path d="M104 535 V492 M114 535 V476 M124 535 V486 M134 535 V464 M144 535 V480 M154 535 V452 M164 535 V470 M174 535 V444 M184 535 V462 M194 535 V436 M204 535 V456 M214 535 V430 M224 535 V448 M234 535 V422 M244 535 V440 M254 535 V416 M264 535 V436 M274 535 V410 M284 535 V430 M294 535 V404 M304 535 V424 M314 535 V398 M324 535 V418 M334 535 V394 M344 535 V416 M354 535 V400 M364 535 V426 M374 535 V410 M384 535 V438 M394 535 V420 M404 535 V450 M414 535 V432 M424 535 V462 M434 535 V444 M444 535 V472 M454 535 V454 M464 535 V484 M474 535 V466 M484 535 V494 M494 535 V476 M504 535 V504 M514 535 V486 M524 535 V512 M534 535 V494 M544 535 V520 M554 535 V502 M564 535 V528 M574 535 V510 M584 535 V530 M594 535 V514 M604 535 V522 M614 535 V506 M624 535 V518 M634 535 V500 M644 535 V512 M654 535 V496" />
+          <path d="M104 660 V590 M114 660 V604 M124 660 V576 M134 660 V600 M144 660 V584 M154 660 V612 M164 660 V592 M174 660 V620 M184 660 V606 M194 660 V628 M204 660 V616 M214 660 V636 M224 660 V624 M234 660 V642 M244 660 V630 M254 660 V648 M264 660 V636 M274 660 V652 M284 660 V640 M294 660 V656 M304 660 V644 M314 660 V650 M324 660 V632 M334 660 V642 M344 660 V620 M354 660 V634 M364 660 V608 M374 660 V626 M384 660 V596 M394 660 V614 M404 660 V582 M414 660 V604 M424 660 V570 M434 660 V592 M444 660 V558 M454 660 V584 M464 660 V546 M474 660 V572 M484 660 V536 M494 660 V564 M504 660 V548 M514 660 V578 M524 660 V560 M534 660 V590 M544 660 V572 M554 660 V604 M564 660 V586 M574 660 V616 M584 660 V598 M594 660 V628 M604 660 V610 M614 660 V640 M624 660 V622 M634 660 V650 M644 660 V632 M654 660 V642" />
+        </g>
+        <text x="765" y="90">
+          <tspan x="765" dy="0">85 607</tspan>
+          <tspan x="765" dy="38">53 702</tspan>
+          <tspan x="765" dy="38">42 975</tspan>
+          <tspan x="765" dy="38">32 780</tspan>
+          <tspan x="765" dy="38">12 973</tspan>
+          <tspan x="765" dy="38">47 635</tspan>
+          <tspan x="765" dy="38">02 789</tspan>
+          <tspan x="765" dy="38">36 921</tspan>
+          <tspan x="765" dy="38">37 603</tspan>
+          <tspan x="765" dy="38">90 368</tspan>
+        </text>
+        <text x="720" y="520">
+          <tspan x="720" dy="0">8321      0448</tspan>
+          <tspan x="720" dy="36">2654      6550</tspan>
+          <tspan x="720" dy="36">3546      3543</tspan>
+          <tspan x="720" dy="36">6979      6487</tspan>
+          <tspan x="720" dy="36">9836      0697</tspan>
+          <tspan x="720" dy="36">5165      9873</tspan>
+        </text>
+      </svg>
+    </section>
+
+    <section>
+      <h2>
+        <small>PNL.</small>
+        PROG. 607
+      </h2>
+      <p>
+        A menu becomes a grid of HAL-style screen tiles. This is one of the
+        few places where the theme turns a plain tag into a more graphic
+        component.
+      </p>
+      <menu>
+        <li><small>STA: 36-05</small><b>HIB</b></li>
+        <li><small>PMT: 26-07</small><b>COM</b></li>
+        <li><small>LIF: 13-AQ</small><b>GDE</b></li>
+        <li><small>CTE: 08-BF</small><b>NAV</b></li>
+        <li><small>LIN: 06-DW</small><b>VEH</b></li>
+        <li><small>AOS: 84-VN</small><b>NUC</b></li>
+        <li><small>RTF: 39-B7</small><b>DMG</b></li>
+        <li><small>VBR: 80-KJ</small><b>CNT</b></li>
+      </menu>
+      <p>
+        <mark>Computer malfunction</mark>
+      </p>
+    </section>
+
+    <section>
+      <h2>
+        <small>NAV.</small>
+        PROG. 608
+      </h2>
+      <p>
+        A plain <code>&lt;nav&gt;</code> can echo the station arrival
+        language buttons from the film while staying readable and simple.
+      </p>
+      <nav>
+        <a href="#cardio">Cardio Vascular</a>
+        <a href="#metabolic">Metabolic Levels</a>
+        <a href="#central">Central Nerv. System</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer>
+    <small>MEM: 90-13 / End transmission</small>
+    <p>
+      This specimen is the documentation: read the HTML to see the intended
+      tags, then change colors in <code>:root</code> inside the CSS file.
+    </p>
+  </footer>
+</body>
+</html>

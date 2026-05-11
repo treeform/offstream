@@ -1,0 +1,505 @@
+/* bb05: a table-first forum theme inspired by 2005 bulletin boards. */
+
+:root {
+  --page: #9090bb;
+  --shell: #f8f8f8;
+  --row-a: #e8e8e8;
+  --row-b: #f1f1f1;
+  --head: #9090bb;
+  --head-dark: #7676a8;
+  --border: #707096;
+  --ink: #000020;
+  --soft: #eeeeff;
+  --gold: #fff788;
+  --blue: #0000c0;
+  --red: #e23e3e;
+  --white: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page);
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgb(255 255 255 / 0.08) 0,
+      rgb(255 255 255 / 0.08) 1px,
+      transparent 1px,
+      transparent 4px
+    ),
+    var(--page);
+  font: 11px/1.45 Verdana, Helvetica, Arial, sans-serif;
+}
+
+body > table {
+  width: min(1000px, calc(100vw - 16px));
+  margin: 12px auto;
+  border: 1px solid #000000;
+  background: var(--shell);
+  table-layout: fixed;
+}
+
+body > table > tbody > tr > td {
+  padding: 10px;
+}
+
+header,
+main,
+section,
+footer {
+  display: block;
+}
+
+header {
+  margin: 0 0 8px;
+}
+
+header table,
+body > table > tbody > tr > td > table,
+section > table,
+form table,
+footer table {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid var(--border);
+  table-layout: fixed;
+}
+
+header table tr:first-child td {
+  padding: 10px;
+  background: var(--shell);
+  vertical-align: top;
+}
+
+header table tr:last-child td,
+body > table > tbody > tr > td > table:first-of-type td {
+  padding: 4px 6px;
+  color: var(--soft);
+  background: var(--head);
+  border-top: 1px solid var(--border);
+}
+
+body > table > tbody > tr > td > table:first-of-type {
+  margin: 0 0 12px;
+}
+
+main {
+  margin: 0;
+}
+
+section {
+  margin: 0 0 14px;
+  overflow-x: auto;
+}
+
+footer {
+  margin-top: 12px;
+}
+
+footer td {
+  padding: 6px;
+  color: var(--soft);
+  background: var(--head-dark);
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul,
+ol,
+blockquote,
+pre {
+  margin-top: 0;
+}
+
+h1 {
+  margin: 0;
+  color: #000000;
+  font: bold 28px/1.1 "Trebuchet MS", Verdana, Helvetica, sans-serif;
+  letter-spacing: 0;
+}
+
+h1 small {
+  display: block;
+  margin: 0 0 2px;
+  color: var(--border);
+  font: bold 11px/1.2 Verdana, Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+}
+
+h2 {
+  margin: 0 0 4px;
+  padding: 5px 7px;
+  color: var(--gold);
+  background: var(--head-dark);
+  border: 1px solid var(--border);
+  font: bold 13px/1.2 Verdana, Helvetica, Arial, sans-serif;
+}
+
+h3 {
+  margin: 0 0 7px;
+  color: #000000;
+  font: bold 13px/1.25 Verdana, Helvetica, Arial, sans-serif;
+}
+
+h4 {
+  margin: 10px 0 5px;
+  color: #000000;
+  font: bold 12px/1.2 Verdana, Helvetica, Arial, sans-serif;
+}
+
+p {
+  margin-bottom: 9px;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+a {
+  color: var(--ink);
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--red);
+  text-decoration: underline;
+}
+
+td > a,
+p a,
+li a {
+  color: var(--blue);
+}
+
+nav a {
+  display: inline-block;
+  margin-right: 12px;
+  color: var(--soft);
+}
+
+small {
+  font-size: 10px;
+}
+
+b,
+strong {
+  font-weight: bold;
+}
+
+i,
+em,
+cite {
+  font-style: italic;
+}
+
+code,
+kbd,
+samp,
+pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 12px;
+}
+
+code {
+  padding: 0 3px;
+  border: 1px solid #b0b0ca;
+  background: var(--white);
+}
+
+pre {
+  max-width: 100%;
+  margin: 8px 0 0;
+  padding: 6px;
+  overflow-x: auto;
+  color: #000000;
+  background: var(--white);
+  border: 1px solid var(--border);
+}
+
+pre code {
+  padding: 0;
+  border: 0;
+  background: transparent;
+}
+
+blockquote {
+  margin: 8px 0;
+  padding: 5px 7px;
+  border: 1px solid var(--border);
+  background: var(--white);
+}
+
+blockquote p {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin-bottom: 9px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 3px;
+}
+
+table {
+  font-size: inherit;
+}
+
+section > table,
+form table {
+  margin: 0 0 10px;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 4px 6px;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+thead th {
+  color: var(--soft);
+  background: var(--head);
+  font-weight: bold;
+  text-align: left;
+}
+
+thead tr:first-child th {
+  color: var(--gold);
+  background: var(--head-dark);
+}
+
+tbody th {
+  color: var(--gold);
+  background: var(--head-dark);
+  font-weight: bold;
+  text-align: left;
+}
+
+tbody tr:nth-child(odd) td {
+  background: var(--row-a);
+}
+
+tbody tr:nth-child(even) td {
+  background: var(--row-b);
+}
+
+td[align="center"],
+th[align="center"] {
+  text-align: center;
+}
+
+td[align="right"],
+th[align="right"] {
+  text-align: right;
+}
+
+td[width="36"] {
+  text-align: center;
+  vertical-align: middle;
+}
+
+td[width="170"] {
+  color: #000000;
+  background: var(--row-a) !important;
+  font-size: 11px;
+}
+
+td[width="170"] b {
+  font-size: 12px;
+}
+
+td[width="70"],
+td[width="80"],
+td[width="120"],
+td[width="150"],
+td[width="190"],
+td[width="220"],
+td[width="230"] {
+  white-space: nowrap;
+}
+
+img {
+  width: 18px;
+  height: 18px;
+  image-rendering: pixelated;
+  vertical-align: middle;
+}
+
+form {
+  margin: 0;
+}
+
+label {
+  font-weight: bold;
+}
+
+input,
+select,
+textarea,
+button {
+  color: #000000;
+  font: 11px Verdana, Helvetica, Arial, sans-serif;
+}
+
+input,
+select,
+textarea {
+  width: min(100%, 680px);
+  padding: 3px 4px;
+  border: 1px solid var(--border);
+  background: #e4e4e4;
+}
+
+textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: auto;
+  margin: 0 3px 0 0;
+  padding: 0;
+  vertical-align: -2px;
+}
+
+input[type="search"] {
+  width: min(100%, 360px);
+}
+
+select {
+  width: auto;
+  min-width: 160px;
+}
+
+button,
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  width: auto;
+  margin: 0 4px 4px 0;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  color: var(--ink);
+  background: #e4e4e4;
+  cursor: pointer;
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+  color: var(--red);
+  background: var(--white);
+}
+
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+a:focus-visible {
+  outline: 1px dotted #000000;
+  outline-offset: 2px;
+}
+
+@media (max-width: 720px) {
+  body {
+    font-size: 10px;
+    overflow-x: hidden;
+  }
+
+  body > table {
+    width: calc(100vw - 8px);
+    margin: 4px auto;
+    display: block;
+  }
+
+  body > table > tbody,
+  body > table > tbody > tr,
+  body > table > tbody > tr > td {
+    display: block;
+    width: 100%;
+  }
+
+  body > table > tbody > tr > td {
+    padding: 6px;
+  }
+
+  main,
+  section {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  main {
+    overflow-x: hidden;
+  }
+
+  header table,
+  header table tbody,
+  header table tr,
+  header table td,
+  body > table > tbody > tr > td > table:first-of-type,
+  body > table > tbody > tr > td > table:first-of-type tbody,
+  body > table > tbody > tr > td > table:first-of-type tr,
+  body > table > tbody > tr > td > table:first-of-type td {
+    display: block;
+    width: 100% !important;
+    text-align: left !important;
+    white-space: normal !important;
+  }
+
+  header table tr:first-child td[width],
+  body > table > tbody > tr > td > table:first-of-type td[align="right"] {
+    border-top: 1px solid var(--border);
+  }
+
+  h1 {
+    font-size: 23px;
+  }
+
+  pre {
+    white-space: pre-wrap;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+
+  #typography {
+    overflow-x: visible;
+  }
+
+  #typography > table,
+  #forms table {
+    table-layout: auto;
+  }
+
+  td[width="170"] {
+    width: 90px;
+  }
+
+  td[width="70"],
+  td[width="80"],
+  td[width="120"],
+  td[width="150"],
+  td[width="190"],
+  td[width="220"],
+  td[width="230"] {
+    white-space: normal;
+  }
+}
