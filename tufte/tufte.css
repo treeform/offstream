@@ -83,7 +83,7 @@ body {
   background-color: var(--bg-color);
   color: var(--text-color);
   font-family: var(--serif);
-  font-size: 15pt;
+  font-size: 20px;
   line-height: 1.6;
 }
 
@@ -113,23 +113,23 @@ h6 {
 
 h1 {
   margin: 0 0 1.5rem;
-  font-size: 2.5rem;
+  font-size: 40px;
   text-align: center;
 }
 
 h2 {
   margin: 2rem 0 1.5rem;
-  font-size: 2rem;
+  font-size: 32px;
 }
 
 h3 {
   margin: 1.8rem 0 1.2rem;
-  font-size: 1.6rem;
+  font-size: 26px;
 }
 
 h4 {
   margin: 1.5rem 0 1rem;
-  font-size: 1.3rem;
+  font-size: 21px;
 }
 
 p,
@@ -152,7 +152,7 @@ p {
 p:has(input),
 p:has(select),
 p:has(button) {
-  font-size: 1.1em;
+  font-size: 22px;
   line-height: 1.8;
   max-width: var(--max-width);
 }
@@ -181,7 +181,7 @@ cite {
 
 small {
   color: var(--muted-color);
-  font-size: 0.8em;
+  font-size: 16px;
   font-style: italic;
 }
 
@@ -220,7 +220,7 @@ sup {
 
 sup a {
   padding-left: 0.08em;
-  font-size: 0.72em;
+  font-size: 14px;
   text-decoration: none;
 }
 
@@ -231,7 +231,7 @@ aside {
   margin: 0.2rem -15.5rem 1rem 1.5rem;
   color: var(--muted-color);
   font-family: var(--serif);
-  font-size: 0.75em;
+  font-size: 15px;
   font-style: italic;
   line-height: 1.45;
 }
@@ -256,17 +256,26 @@ figcaption,
 caption {
   margin-top: 0.5rem;
   color: var(--muted-color);
-  font-size: 0.78em;
+  font-size: 16px;
   font-style: italic;
   line-height: 1.4;
   text-align: left;
+}
+
+caption {
+  margin: 0 0 0.5rem;
+  color: var(--muted-color);
+  font-family: var(--serif);
+  font-size: 15px;
+  font-style: italic;
+  line-height: 1.45;
 }
 
 code,
 kbd,
 samp {
   font-family: var(--mono);
-  font-size: 0.78em;
+  font-size: 16px;
 }
 
 code {
@@ -283,14 +292,14 @@ pre {
   padding: 1rem;
   border: 1px solid var(--border-color);
   background: var(--input-bg);
-  font-size: 0.72em;
+  font-size: 14px;
   line-height: 1.5;
 }
 
 pre code {
   padding: 0;
   background: transparent;
-  font-size: inherit;
+  font-size: 14px;
 }
 
 ul,
@@ -344,7 +353,7 @@ button {
   caret-color: var(--accent-color);
   color: var(--accent-color);
   font-family: var(--serif);
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 input,
@@ -388,7 +397,7 @@ p select {
   border: 0;
   border-bottom: var(--rule-width) solid var(--accent-color);
   background-color: var(--bg-color);
-  font-size: 1em;
+  font-size: 22px;
   vertical-align: baseline;
 }
 
@@ -517,8 +526,12 @@ table {
   margin: 1rem 0 2rem;
   border-collapse: collapse;
   font-family: var(--sans);
-  font-size: 0.72em;
+  font-size: 14px;
   line-height: 1.45;
+}
+
+thead {
+  border-bottom: 1px solid var(--accent-color);
 }
 
 th,
@@ -529,12 +542,11 @@ td {
 }
 
 th {
-  border-bottom: 1px solid var(--border-color);
   font-weight: normal;
 }
 
-td {
-  border-bottom: 1px solid rgb(233 236 239 / 0.55);
+tbody tr:first-child td {
+  padding-top: 0.55rem;
 }
 
 td:not(:first-child),
@@ -548,20 +560,62 @@ tfoot td {
   font-style: italic;
 }
 
+.table-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin: 0 0 0.5rem;
+}
+
+.table-actions button {
+  padding: 0.18rem 0.45rem;
+}
+
+.item-list th,
+.item-list td {
+  text-align: left;
+  font-variant-numeric: normal;
+}
+
+.item-list th:first-child,
+.item-list td:first-child {
+  width: 2rem;
+  padding-right: 0.6rem;
+  text-align: center;
+}
+
+.item-list th:nth-child(4),
+.item-list td:nth-child(4) {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+.item-list th:nth-last-child(-n + 2),
+.item-list td:nth-last-child(-n + 2) {
+  white-space: nowrap;
+}
+
+.item-list td:nth-last-child(2) a {
+  margin-right: 0.45rem;
+}
+
+.item-list button {
+  padding: 0.18rem 0.45rem;
+}
+
 footer {
   max-width: var(--max-width);
   margin: 4rem auto 0;
   padding: 2rem;
-  border-top: 1px solid var(--border-color);
   color: var(--muted-color);
-  font-size: 0.8em;
+  font-size: 16px;
 }
 
 footer h2,
 footer h3 {
   margin-top: 0;
   color: var(--muted-color);
-  font-size: 1.3rem;
+  font-size: 21px;
 }
 
 footer ol {
@@ -601,7 +655,7 @@ summary {
   margin-bottom: 1.5rem;
   color: var(--accent-color);
   font-family: var(--serif);
-  font-size: 1.4rem;
+  font-size: 22px;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
@@ -609,7 +663,7 @@ summary {
 .narrative {
   max-width: var(--max-width);
   margin-bottom: 1rem;
-  font-size: 1.1em;
+  font-size: 22px;
   line-height: 1.8;
 }
 
@@ -622,7 +676,7 @@ summary {
   border: 0;
   border-bottom: var(--rule-width) solid var(--accent-color);
   background: var(--bg-color);
-  font-size: 1em;
+  font-size: 20px;
 }
 
 .inline-input {
@@ -679,12 +733,12 @@ summary {
   border: var(--rule-width) solid var(--accent-color);
   background: var(--bg-color);
   font-family: var(--serif);
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .input-group input[type="number"] {
   font-family: var(--sans);
-  font-size: 1rem;
+  font-size: 16px;
 }
 
 .results-summary {
@@ -695,7 +749,7 @@ summary {
   margin-bottom: 1rem;
   color: var(--success-color);
   font-family: var(--serif);
-  font-size: 2.5rem;
+  font-size: 40px;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
@@ -720,7 +774,7 @@ summary {
   margin: 1rem 0;
   color: var(--muted-color);
   font-family: var(--serif);
-  font-size: 0.9em;
+  font-size: 18px;
   text-align: center;
 }
 
@@ -731,7 +785,7 @@ summary {
   color: var(--text-color);
   cursor: pointer;
   font-family: inherit;
-  font-size: inherit;
+  font-size: 18px;
   opacity: 0.6;
   text-transform: lowercase;
   transition: opacity 0.2s ease;
@@ -751,7 +805,7 @@ summary {
   margin: 1rem 0;
   border-collapse: collapse;
   font-family: var(--sans);
-  font-size: 0.6em;
+  font-size: 12px;
 }
 
 .data-table th,
@@ -798,7 +852,7 @@ summary {
   margin-right: 4px;
   border: 2px solid transparent;
   cursor: pointer;
-  font-size: 0.8em;
+  font-size: 16px;
   line-height: 60px;
   text-align: center;
 }
@@ -818,7 +872,7 @@ summary {
   width: 80px;
   padding-left: 0;
   cursor: default;
-  font-size: 0.8em;
+  font-size: 16px;
   text-align: left;
 }
 
@@ -852,7 +906,7 @@ summary {
 .checkbox-group label {
   margin: 0;
   cursor: pointer;
-  font-size: 0.9em;
+  font-size: 18px;
   font-style: italic;
 }
 
@@ -868,7 +922,7 @@ summary {
   background-size: 1em;
   cursor: pointer;
   font-family: var(--serif);
-  font-size: 1rem;
+  font-size: 16px;
   appearance: none;
 }
 
@@ -918,10 +972,6 @@ summary {
 }
 
 @media (max-width: 720px) {
-  body {
-    font-size: 13.5pt;
-  }
-
   main,
   article,
   footer,
@@ -930,16 +980,7 @@ summary {
   }
 
   h1 {
-    font-size: 2rem;
     text-align: left;
-  }
-
-  h2 {
-    font-size: 1.65rem;
-  }
-
-  h3 {
-    font-size: 1.35rem;
   }
 
   fieldset {
