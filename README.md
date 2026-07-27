@@ -17,6 +17,7 @@ are not enough.
 
 - [`2001`](https://treeform.github.io/offstream/2001/) - A HAL 9000 inspired interface theme.
 - [`tufte`](https://treeform.github.io/offstream/tufte/) - A sparse document style inspired by Edward Tufte.
+- [`starx`](https://treeform.github.io/offstream/starx/) - A black and white sci-fi HUD theme with one orange highlight.
 - [`bb05`](https://treeform.github.io/offstream/bb05/) - An experimental theme.
 
 ## Publishing

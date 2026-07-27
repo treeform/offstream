@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Starx CSS</title>
+  <link rel="stylesheet" href="starx.css">
+</head>
+<body>
+  <main>
+    <section data-ref="SYS.1 / INTRO / BLACK/ORG">
+      <div class="meta">
+        <span>N°7084</span>
+        <span>FIG.01</span>
+        <span>58/100</span>
+      </div>
+      <h1>Starx CSS</h1>
+      <p>
+        This page is both the showcase and the usage guide for
+        <b>starx.css</b>, a sci-fi document theme. Copy the CSS file next to
+        any plain HTML document, link it in the head, and write normal
+        semantic tags: <i>h1</i>, <i>p</i>, <i>figure</i>, <i>form</i>, and
+        <i>table</i>. The theme uses a black field, white type, thin rules,
+        corner marks, and a single orange highlight.
+      </p>
+      <p>
+        The palette is strict. Background is <code>#000000</code>. Text is
+        <code>#f0f0f0</code>. The only accent is
+        <mark>#d46837</mark>. Headings use Microgramma. Body copy uses Scout.
+        Numbers, codes, and tables use IBM Plex Mono. Do not use
+        <code>aside</code> margin notes in this theme.
+      </p>
+
+      <pre><code>&lt;link rel="stylesheet" href="starx.css"&gt;
+
+&lt;main&gt;
+  &lt;h1&gt;AXIOM-66&lt;/h1&gt;
+  &lt;p&gt;Plain prose with &lt;b&gt;strong data&lt;/b&gt; and a note.&lt;/p&gt;
+&lt;/main&gt;</code></pre>
+    </section>
+
+    <section data-ref="SYS.2 / TYPE / HEADING">
+      <h2>Headings</h2>
+      <p>
+        Headings are extended, uppercase, and explicit. They should introduce
+        real structure rather than decorate the page. Optional
+        <code>data-ref</code> on a section prints a small mono label above the
+        content, like a schematic callout.
+      </p>
+      <h3>Third Level Heading</h3>
+      <p>
+        A third level heading works well for sections inside results, methods,
+        or examples. Keep the casing technical and the spacing generous.
+      </p>
+      <h4>Fourth Level Heading</h4>
+      <p>
+        A fourth level heading is small enough for local notes, subsections,
+        and table commentary.
+      </p>
+    </section>
+
+    <section data-ref="SYS.3 / TYPE / PROSE">
+      <h2>Paragraphs</h2>
+      <p>
+        The style is designed for technical writing. A paragraph can carry
+        narrative, a number, and a source note without changing gears.
+        Use <b>bold</b> for hard facts, <i>italic</i> for soft emphasis, and
+        <mark>mark</mark> only when a single value must read as the active
+        signal.
+      </p>
+      <p>
+        A paragraph may also contain a star note<sup><a href="#note-source">*</a></sup>.
+        Put the explanation in the footer. This keeps the reading path clean
+        while preserving provenance and caveats.
+      </p>
+      <p>
+        <samp>
+          SYS 04-AC RELAY 1138.040 / BFR 00039 / AMB 14.85 / NODE 7
+          REPORTS NOMINAL SIGNAL DRIFT WITHIN ACCEPTED RANGE.
+        </samp>
+      </p>
+      <blockquote>
+        <p>
+          Keep the field black, the type white, and the orange rare enough
+          that every highlight still means something.
+        </p>
+      </blockquote>
+    </section>
+
+    <section data-ref="SYS.4 / FIG / CHART">
+      <h2>Figures</h2>
+      <p>
+        Use ordinary <code>figure</code> and <code>figcaption</code> tags for
+        charts. The CSS does not impose a chart library. Agents can paste in
+        SVG, canvas, or an image produced by another tool. Draw charts on
+        black with white rules and one orange focus point.
+      </p>
+      <figure class="wide">
+        <svg viewBox="0 0 760 260" role="img"
+          aria-label="A minimal line chart with one measured series.">
+          <rect x="0" y="0" width="760" height="260" fill="#000000"></rect>
+          <g stroke="#3a3a3a" stroke-width="1">
+            <line x1="54" y1="30" x2="54" y2="218"></line>
+            <line x1="54" y1="218" x2="720" y2="218"></line>
+            <line x1="54" y1="171" x2="720" y2="171"></line>
+            <line x1="54" y1="124" x2="720" y2="124"></line>
+            <line x1="54" y1="77" x2="720" y2="77"></line>
+          </g>
+          <polyline fill="none" stroke="#f0f0f0" stroke-width="1.5"
+            points="54,191 118,180 182,142 246,155 310,119 374,96 438,105 502,72 566,64 630,51 694,44">
+          </polyline>
+          <g fill="#f0f0f0">
+            <circle cx="54" cy="191" r="2.5"></circle>
+            <circle cx="310" cy="119" r="2.5"></circle>
+            <circle cx="694" cy="44" r="2.5"></circle>
+          </g>
+          <circle cx="374" cy="96" r="4" fill="#d46837"></circle>
+          <g fill="#8a8a8a" font-family="IBM Plex Mono, monospace"
+            font-size="12" font-weight="bold">
+            <text x="42" y="224" text-anchor="end">0</text>
+            <text x="42" y="130" text-anchor="end">50</text>
+            <text x="42" y="36" text-anchor="end">100</text>
+            <text x="54" y="244" text-anchor="middle">01</text>
+            <text x="374" y="244" text-anchor="middle">06</text>
+            <text x="694" y="244" text-anchor="middle">11</text>
+          </g>
+        </svg>
+        <figcaption>
+          FIG.08 / Line series with one orange focus node.
+        </figcaption>
+      </figure>
+
+      <figure class="wide">
+        <svg viewBox="0 0 760 300" role="img"
+          aria-label="A minimal bar chart comparing signal by node.">
+          <title>Signal by node</title>
+          <rect x="0" y="0" width="760" height="300" fill="#000000"></rect>
+          <g stroke="#3a3a3a" stroke-width="1">
+            <line x1="64" y1="40" x2="710" y2="40"></line>
+            <line x1="64" y1="100" x2="710" y2="100"></line>
+            <line x1="64" y1="160" x2="710" y2="160"></line>
+            <line x1="64" y1="220" x2="710" y2="220"></line>
+          </g>
+          <g fill="#f0f0f0">
+            <rect x="90" y="186" width="40" height="34"></rect>
+            <rect x="178" y="99" width="40" height="121"></rect>
+            <rect x="266" y="154" width="40" height="66"></rect>
+            <rect x="354" y="195" width="40" height="25"
+              fill="#d46837"></rect>
+            <rect x="442" y="47" width="40" height="173"></rect>
+            <rect x="530" y="163" width="40" height="57"></rect>
+            <rect x="618" y="143" width="40" height="77"></rect>
+          </g>
+          <g fill="#8a8a8a" font-family="IBM Plex Mono, monospace"
+            font-size="12" font-weight="bold">
+            <text x="52" y="225" text-anchor="end">0</text>
+            <text x="52" y="165" text-anchor="end">20</text>
+            <text x="52" y="105" text-anchor="end">40</text>
+            <text x="52" y="45" text-anchor="end">60</text>
+            <text x="110" y="247" text-anchor="middle">N01</text>
+            <text x="198" y="247" text-anchor="middle">N02</text>
+            <text x="286" y="247" text-anchor="middle">N03</text>
+            <text x="374" y="247" text-anchor="middle"
+              fill="#d46837">N04</text>
+            <text x="462" y="247" text-anchor="middle">N05</text>
+            <text x="550" y="247" text-anchor="middle">N06</text>
+            <text x="638" y="247" text-anchor="middle">N07</text>
+            <text x="110" y="178" text-anchor="middle">11.2</text>
+            <text x="198" y="91" text-anchor="middle">40.2</text>
+            <text x="286" y="146" text-anchor="middle">22.1</text>
+            <text x="374" y="187" text-anchor="middle"
+              fill="#d46837">8.4</text>
+            <text x="462" y="39" text-anchor="middle">57.8</text>
+            <text x="550" y="155" text-anchor="middle">18.9</text>
+            <text x="638" y="135" text-anchor="middle">25.6</text>
+          </g>
+        </svg>
+        <figcaption>
+          FIG.12 / Bar chart with one orange exception bar.
+        </figcaption>
+      </figure>
+
+      <figure class="wide">
+        <svg viewBox="0 0 760 280" role="img"
+          aria-label="A dial readout with orange needle.">
+          <rect x="0" y="0" width="760" height="280" fill="#000000"></rect>
+          <g fill="none" stroke="#f0f0f0" stroke-width="1.25">
+            <circle cx="380" cy="150" r="96"></circle>
+            <circle cx="380" cy="150" r="4" fill="#f0f0f0"></circle>
+          </g>
+          <g stroke="#f0f0f0" stroke-width="1">
+            <line x1="380" y1="54" x2="380" y2="64"></line>
+            <line x1="476" y1="150" x2="466" y2="150"></line>
+            <line x1="380" y1="246" x2="380" y2="236"></line>
+            <line x1="284" y1="150" x2="294" y2="150"></line>
+            <line x1="448" y1="82" x2="441" y2="89"></line>
+            <line x1="448" y1="218" x2="441" y2="211"></line>
+            <line x1="312" y1="82" x2="319" y2="89"></line>
+            <line x1="312" y1="218" x2="319" y2="211"></line>
+          </g>
+          <line x1="380" y1="150" x2="430" y2="78"
+            stroke="#d46837" stroke-width="2"></line>
+          <circle cx="380" cy="150" r="5" fill="#f0f0f0"></circle>
+          <g fill="#8a8a8a" font-family="IBM Plex Mono, monospace"
+            font-size="12" font-weight="bold">
+            <text x="120" y="40">C.16</text>
+            <text x="120" y="58">DIAL / CENTERED</text>
+            <text x="560" y="40" text-anchor="end">M.61</text>
+            <text x="560" y="250" text-anchor="end" fill="#d46837">
+              58/100
+            </text>
+          </g>
+          <rect x="575" y="238" width="12" height="12" fill="#d46837"></rect>
+        </svg>
+        <figcaption>
+          FIG.08 / Dial: white ticks, orange needle, one status block.
+        </figcaption>
+      </figure>
+    </section>
+
+    <section data-ref="SYS.5 / DATA / TABLE">
+      <h2>Tables</h2>
+      <p>
+        Tables use IBM Plex Mono. Text columns stay left, numeric columns
+        align right, and rules stay thin. Hovering a row shifts its type to
+        orange so the active scan line is obvious.
+      </p>
+      <table class="wide">
+        <caption>
+          Example telemetry table for a station report.
+        </caption>
+        <thead>
+          <tr>
+            <th>Node</th>
+            <th>Samples</th>
+            <th>Median lux</th>
+            <th>Moisture</th>
+            <th>Canopy</th>
+            <th>Slope</th>
+            <th>Change</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>north transect</td>
+            <td>42</td>
+            <td>2,430</td>
+            <td>11.2%</td>
+            <td>18%</td>
+            <td>6 deg</td>
+            <td>+4.1%</td>
+          </tr>
+          <tr>
+            <td>shade margin</td>
+            <td>38</td>
+            <td>1,880</td>
+            <td>40.2%</td>
+            <td>71%</td>
+            <td>11 deg</td>
+            <td>-1.8%</td>
+          </tr>
+          <tr>
+            <td>lower slope</td>
+            <td>31</td>
+            <td>2,070</td>
+            <td>22.1%</td>
+            <td>46%</td>
+            <td>17 deg</td>
+            <td>+2.6%</td>
+          </tr>
+          <tr>
+            <td>ridge path</td>
+            <td>27</td>
+            <td>3,140</td>
+            <td>8.4%</td>
+            <td>12%</td>
+            <td>9 deg</td>
+            <td>+5.3%</td>
+          </tr>
+          <tr>
+            <td>creek bend</td>
+            <td>35</td>
+            <td>1,260</td>
+            <td>57.8%</td>
+            <td>83%</td>
+            <td>4 deg</td>
+            <td>-3.7%</td>
+          </tr>
+          <tr>
+            <td>meadow edge</td>
+            <td>44</td>
+            <td>2,760</td>
+            <td>18.9%</td>
+            <td>29%</td>
+            <td>3 deg</td>
+            <td>+1.2%</td>
+          </tr>
+          <tr>
+            <td>south plot</td>
+            <td>29</td>
+            <td>2,220</td>
+            <td>25.6%</td>
+            <td>52%</td>
+            <td><mark>14 deg</mark></td>
+            <td>+0.4%</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>source</td>
+            <td colspan="6">synthetic sample values</td>
+          </tr>
+        </tfoot>
+      </table>
+
+      <pre><code>&lt;table&gt;
+  &lt;caption&gt;Use captions for source and scope.&lt;/caption&gt;
+  &lt;thead&gt;...&lt;/thead&gt;
+  &lt;tbody&gt;...&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+    </section>
+
+    <section data-ref="SYS.6 / DATA / LIST">
+      <h2>Item Lists</h2>
+      <p>
+        Item lists can still be ordinary tables. Use the first column for row
+        selection, keep account details in plain cells, and reserve compact
+        controls for row actions.
+      </p>
+      <div class="table-actions wide">
+        <button type="button">add</button>
+        <button type="button">delete</button>
+      </div>
+      <table class="wide item-list">
+        <thead>
+          <tr>
+            <th>
+              <input type="checkbox" aria-label="Select all accounts">
+            </th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Items</th>
+            <th>Status</th>
+            <th>Last seen</th>
+            <th>Links</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <input type="checkbox" aria-label="Select Ada Field">
+            </td>
+            <td>Ada Field</td>
+            <td>18 Linden Street</td>
+            <td>12 ledgers</td>
+            <td><span class="status"></span>active</td>
+            <td>May 18</td>
+            <td>
+              <a href="#">view</a>
+              <a href="#">items</a>
+            </td>
+            <td>
+              <button type="button">report</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" aria-label="Select North Pier Co.">
+            </td>
+            <td>North Pier Co.</td>
+            <td>402 Harbor Road</td>
+            <td>7 crates</td>
+            <td>review</td>
+            <td>May 16</td>
+            <td>
+              <a href="#">view</a>
+              <a href="#">items</a>
+            </td>
+            <td>
+              <button type="button">report</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" aria-label="Select Orchard Bank">
+            </td>
+            <td>Orchard Bank</td>
+            <td>91 Stone Avenue</td>
+            <td>24 notes</td>
+            <td><span class="status"></span>active</td>
+            <td>May 12</td>
+            <td>
+              <a href="#">view</a>
+              <a href="#">items</a>
+            </td>
+            <td>
+              <button type="button">report</button>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <input type="checkbox" aria-label="Select Vale Supply">
+            </td>
+            <td>Vale Supply</td>
+            <td>7 Cedar Lane</td>
+            <td>5 parcels</td>
+            <td>paused</td>
+            <td>May 9</td>
+            <td>
+              <a href="#">view</a>
+              <a href="#">items</a>
+            </td>
+            <td>
+              <button type="button">report</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section data-ref="SYS.7 / INPUT / FORM">
+      <h2>Forms</h2>
+      <p>
+        Inline forms are preferred when the controls are small and can be part
+        of a sentence. If you must use larger forms, here they are too:
+      </p>
+      <p>
+        Inline controls work inside prose. Observe the site for
+        <input type="number" value="14" min="1" max="100">
+        days with
+        <input type="number" value="6" min="1" max="24">
+        samples per day, recording
+        <select>
+          <option>light and shade</option>
+          <option>wind and water</option>
+          <option>soil and slope</option>
+        </select>
+        as the primary signal. Inputs in paragraphs are underlined and
+        compact because they are part of the sentence.
+      </p>
+      <form onsubmit="return false;">
+        <fieldset>
+          <legend>Observation</legend>
+
+          <label for="site">Site</label>
+          <input id="site" name="site" value="North transect">
+
+          <label for="method">Method</label>
+          <select id="method" name="method">
+            <option>walking survey</option>
+            <option>fixed camera</option>
+            <option>sample quadrat</option>
+          </select>
+
+          <label for="notes">Notes</label>
+          <textarea id="notes" name="notes">Keep the form quiet and make the observations do the work.</textarea>
+
+          <p>
+            <label>
+              <input type="checkbox" checked>
+              include raw measurements
+            </label>
+          </p>
+
+          <button type="submit">record</button>
+          <button type="reset">reset</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section data-ref="SYS.8 / INPUT / CTRL">
+      <h2>Controls</h2>
+      <p>
+        Controls should feel like instruments on a dark panel. They use white
+        strokes, black surfaces, mono labels, and orange only for the active
+        state.
+      </p>
+      <form onsubmit="return false;">
+        <fieldset>
+          <legend>Control Set</legend>
+
+          <label for="title">Text input</label>
+          <input id="title" name="title" value="Annotated field notes">
+
+          <label for="count">Number input</label>
+          <input id="count" name="count" type="number" value="12" min="0">
+
+          <label for="mode">Select menu</label>
+          <select id="mode" name="mode">
+            <option>compare</option>
+            <option>collect</option>
+            <option>revise</option>
+          </select>
+
+          <label for="density">Slider</label>
+          <input id="density" name="density" type="range" min="0" max="100"
+            value="64">
+
+          <p>
+            <label>
+              <input type="checkbox" checked>
+              show marginal notes
+            </label>
+          </p>
+          <p>
+            <label>
+              <input type="checkbox">
+              show source table
+            </label>
+          </p>
+
+          <p>
+            <label>
+              <input type="radio" name="scale" checked>
+              local scale
+            </label>
+            <label>
+              <input type="radio" name="scale">
+              regional scale
+            </label>
+          </p>
+
+          <button type="button">plain</button>
+          <button type="submit">submit</button>
+          <button type="reset">reset</button>
+        </fieldset>
+      </form>
+    </section>
+
+    <section data-ref="SYS.9 / GUIDE / AGENT">
+      <h2>Agent Notes</h2>
+      <dl>
+        <dt>Use tags first.</dt>
+        <dd>
+          Prefer <code>main</code>, <code>section</code>, <code>p</code>,
+          <code>figure</code>, <code>form</code>, and <code>table</code>
+          before inventing component classes. Skip <code>aside</code>.
+        </dd>
+        <dt>Keep orange rare.</dt>
+        <dd>
+          Use <code>mark</code>, <code>.highlight</code>,
+          <code>.status</code>, submit buttons, and one chart focus point.
+          Never flood the page with accent color.
+        </dd>
+        <dt>Use classes only for intent.</dt>
+        <dd>
+          Helpers include <code>.wide</code>, <code>.quiet</code>,
+          <code>.mono</code>, <code>.meta</code>, <code>.status</code>, and
+          <code>.highlight</code>.
+        </dd>
+        <dt>Keep the page sparse.</dt>
+        <dd>
+          Avoid cards, gradients, heavy borders, and decorative panels. Thin
+          white lines, corner plus marks, and mono labels do enough.
+        </dd>
+      </dl>
+      <ul>
+        <li>Black field, white type, one orange signal.</li>
+        <li>Microgramma for headings, Scout for prose.</li>
+        <li><mark>IBM Plex Mono</mark> for numbers and codes.</li>
+        <li>Hairline frames and registration marks.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <h2>Notes</h2>
+    <ol>
+      <li id="note-source">
+        Star notes belong here. Use them for sources, definitions, caveats, or
+        tiny explanations that would interrupt the paragraph.
+      </li>
+    </ol>
+  </footer>
+</body>
+</html>
